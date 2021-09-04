@@ -78,7 +78,6 @@ int c = myTest.sum(a, b);
 <br>
 
 ### 2-2) 입력값이 없는 메서드
-입력 값이 없는 메서드도 존재할 수 있다. 
 ```java 
 public String say() {
     return "Hi";
@@ -103,3 +102,55 @@ String a = myTest.say();
 <br>
 
 ### 2-3) 리턴값이 없는 메서드
+```java
+public void sum(int a, int b) {
+    System.out.println(a+"과 "+b+"의 합은 "+(a+b)+"입니다.");
+}
+```
+위 sum 메서드의 입출력 자료형은 다음과 같다.
++ 입력 값 - int 자료형 a, b
++ 리턴 값 - void(없음)
+<br>
+
+리턴값이 없는 메서드는 명시적으로 리턴타입 부분에 **void**라고 표기한다.<br>
+리턴값이 없는 메서드는 돌려주는 값이 없기 때문에 다음과 같이 사용한다. 
+```java
+객체.메소드명(입력인수1, 입력인수2, ...)
+```
+```java
+Test myTest = new Test();
+myTest.sum(3, 4);
+```
+실제로 호출해보면 다음과 같이 문자열이 출력된다. 
+```java
+3과 4의 합은 7입니다.
+```
+
+<br>
+
+### 2-4) 입력값도 리턴값도 없는 메서드
+```java
+public void say() {
+    System.out.println("Hi");
+}
+```
+위 say 메소드의 입출력 자료형은 다음과 같다.
++ 입력 값 - 없음
++ 리턴 값 - void (없음)
+
+<br>
+
+입력을 받는 곳도 없고, return문도 없으니 입력값도 리턴값도 없는 메서드이다. 
+아래와 같이 실행할 수 있다. 
+```java
+객체.메소드명()
+```
+```java
+Test myTest = new Test();
+myTest.say();
+```
+
+<br>
+
+## 3) return의 또 다른 쓰임새
+메서드를 빠져나가기를 원할 때 return만 단독으로 써서 
