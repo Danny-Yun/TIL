@@ -153,4 +153,16 @@ myTest.say();
 <br>
 
 ## 3) return의 또 다른 쓰임새
-메서드를 빠져나가기를 원할 때 return만 단독으로 써서 
+return만 단독으로 써서 메서드를 빠져나가게 할 수도 있다. 
+```java
+public void introduce(String name) {
+    if("jiwoo".equals(name)) {
+        return;
+    }
+    System.out.println("나의 이름은 "+name+"입니다.");
+}
+```
+이 메서드는 입력값으로 'jiwoo'라는 값이 들어오면 문자열을 출력하지 않고 메서드를 즉시 빠져나간다.<br>
+이런식으로 매서드 수행 시 특정 조건에 따라 메서드를 즉시 빠져나가고 싶은 경우 return문을 이용하면 된다. <br>
+여기서 유의할 점은 return 문만을 써서 메서드를 빠져나가는 이 방법은 리턴자료형이 void형인 메서드에만 해당된다.<br>
+메서드의 리턴값은 오로지 return문에 의해서만 생성되기 때문에, 리턴자료형이 명시되어 있는 메서드에서 return 문만 작성하면 컴파일 시 오류가 발생한다.<br>
