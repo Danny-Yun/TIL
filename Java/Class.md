@@ -77,18 +77,17 @@ Animal클래스에 추가된 setName메서드는 다음과 같은 형태의 메�
 <br>
 
 ```java
-this.name = name;
-```
-여기서 `this`는 Animal 클래스에 의해서 생성된 객체를 지칭한다.    
-만약 `Animal dog = new Animal()`와 같이 dog객체를 만들고,    
-`dog.setName("happy")`와 같이 dog객체에 의해 setName 메서드를 호출하면 setName 메소드 내부에 선언된 this는 바로 dog 객체를 지칭하게 된다.
-
-<br>
-
-```java
 cat.setName("tom");
 ```
 객체 변수에 접근하기 위해서 `객체.변수`와 같이 도트연산자(.)로 접근할 수 있었던 것처럼, `객체.메서드`로 객체가 메서드를 호출할 수 있다. 
 
+<br>
 
+```java
+this.name = name;
+```
+여기서 `this`는 Animal 클래스에 의해서 생성된 객체를 지칭한다.    
+만약 `Animal dog = new Animal()`와 같이 dog객체를 만들고,    
+`dog.setName("happy")`와 같이 dog객체에 의해 setName 메서드를 호출하면     
+setName 메소드 내부에 선언된 this는 바로 dog 객체를 지칭하게 된다.
 
