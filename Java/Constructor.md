@@ -69,9 +69,20 @@ public class Dog extends Animal {
     public HouseDog(String name) {
         this.setName(name);
     } 
-    
+
     public void sleep(int hour) {
         System.out.println(this.name+" zzz in house for " + hour + " hours");
     } 
+
+     public static void main(String[] args) {
+        Dog dog = new Dog("Choco");
+        System.out.println(dog.name);
+    }
 }
 ```
+아래처럼 main메서드 실행시 이제 null값이 뜨지 않고, 결과가 출력되는 것을 확인할 수 있다.   
+```java
+Choco
+```
+
+이처럼 생성자를 사용했을 때 얻게 되는 이점은 `setName("Choco")`와 같은 필수적인 행동을 객체 생성할 때 제어할 수 있게 된다는 점이다. 
