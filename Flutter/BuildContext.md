@@ -1,6 +1,6 @@
 # 빌드컨텍스트(BuildContext)
 
-### 정의
+## 정의
 
 "A handle to the location of a widget in the widget tree."    
 
@@ -20,7 +20,10 @@
 
 -> 모든 위젯은 자신만의 BuildContext를 가지고 있다. **이 BuildContext는 stateless 위젯이나 state 빌드 메서드에 의해서 리턴된 위젯의 부모가 된다.**"
 s
-### 자주 볼 수 있는 오류
+
+<br>
+
+## 자주 볼 수 있는 오류
 
 ```dart
 "Scaffold.of() called with a context that does not contain a Scaffold"
