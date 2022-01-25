@@ -8,6 +8,18 @@
 
 <br>
 
+**BuildContext**는 앱을 만들 때 알아야 할 중요한 개념 중 하나로 전체 위젯 트리를 추적하는 것과 관련이 있으며특히 트리에서 위젯의 위치와 관련이 있다. 카운터 앱의 색을 바꿨던 것처럼 ThemeData에서 테마를 갱신하면 위젯 트리의 모든 자식 위젯을 갱신한다. 
+
+위젯의 모든 build 메서드는 위젯 트리에서 위젯의 위치를 참조하는 BuildContext 하나를 인수로 받는다. build는 프레임워크가 호출하므로 BuildContext를 개발자가 관리할 필요는 없지만 이를 자주 사용하게 된다. 
+
+<br>
+
+빌드 컨텍스트는 특정 위젯을 정확하게 어떻게 표현할지 결정한다. 
+
+빌드 컨텍스트는 위젯 자체의 정보가 아니라 위젯 트리에서 위젯의 위치 정보를 포함한다.
+
+<br>
+
 <img width="491" alt="빌드컨텍스트1" src="https://user-images.githubusercontent.com/86466976/146136049-92486bf1-6cb8-4ca4-97f0-59a917b771bb.png">
 
 <br>
@@ -19,7 +31,7 @@
 "Each widget has its own BuildContext, **which becomes the parent of the widget returned by the StatelessWidget.build or State.build function.**"
 
 -> 모든 위젯은 자신만의 BuildContext를 가지고 있다. **이 BuildContext는 stateless 위젯이나 state 빌드 메서드에 의해서 리턴된 위젯의 부모가 된다.**"
-s
+
 
 <br>
 
